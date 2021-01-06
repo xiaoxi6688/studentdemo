@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static from staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myApp/css/mystyle.css' %}">
+{#    <link rel="stylesheet" type="text/css" href="/static/myApp/css/style.css">#}
+    <script type="text/javascript" src="/static/myApp/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/static/myApp/js/sun.js"></script>
+    <img src="{% static 'myApp/img/submit.png' %}"/>
+</head>
+<body>
+{#    <a href="/good">链接</a>#}
+    <a href="{% url 'app:good' 1 %}">链接</a>
+    <hr/>
+    {{ code|escape }}
+    {{ code|safe }}
+    {% autoescape off %}
+          {{ code }}
+    {% endautoescape %}
+    <hr/>
+    <h1>Django高级用法</h1>
+</body>
+</html>

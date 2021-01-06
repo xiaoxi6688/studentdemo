@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentsInfo</title>
+</head>
+<body>
+ <h1>学生信息列表</h1>
+<ul>
+    {% for student in students %}
+        {% if forloop.counter|divisibleby:2 %}
+        <li style="color:red">
+            {{ forloop.counter }}--{{ student.sname }}--{{ student.scontent }}--{{ student.sgrade }}
+        </li>
+        {% else %}
+            <li style="color:blue">
+            {{ forloop.counter }}--{{ student.sname }}--{{ student.scontent }}--{{ student.sgrade }}
+        </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<ul>
+    {% for index in students.paginator.page_range %}
+        {% if index == students.number %}
+            <li>{{ index }}</li>
+        {% else %}
+            <li>
+            <a href="/student/{{ index }}">{{ index }}</a>
+            </li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+</body>
+</html>

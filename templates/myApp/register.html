@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+    <form action="/register" methond="post">
+        {% csrf_token %}
+        <label>姓名：</label><input type="text" name="name" value=""/>
+        <hr>
+        <label>性别：</label><input type="radio" name="gender" value="1"/>男
+        <input type="radio" name="gender" value="0"/>女
+        <hr>
+         <label>年龄：</label><input type="text" name="age" value=""/>
+        <hr>
+         <label>爱好：</label><input type="checkbox" name="hobby" value="power"/>权力
+        <input type="checkbox" name="hobby" value="money"/>金钱
+        <input type="checkbox" name="hobby" value="beauty"/>美女
+        <hr>
+        <input type="submit"  value="注册"/>
+    </form>
+</body>
+</html>
