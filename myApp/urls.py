@@ -1,40 +1,45 @@
-from django.conf.urls import url
+
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import re_path
+
+# git@github.com:xiaoxi6688/studentdemo.git
+
+
 
 from myApp import views
 urlpatterns=[
-    url(r'^$',views.index,name="index"),
-    url(r'^(\d+)/$',views.detail),
-    url(r'^grade/$',views.grade),
-    url(r'^grades/$',views.grades),
-    url(r'^student/(\d+)$',views.student),
-    url(r'^grade/(\d+)$',views.gradeStudents),
-    url(r'^addstu/$',views.addstu),
-    url(r'^addstu2/$',views.addstu2),
-    url(r'^stu/(\d+)$',views.stupage),
-    url(r'^stusearch/$',views.stusearch),
-    url(r'^attrib/$',views.attrib),
-    url(r'^get1/$',views.get1),
-    url(r'^register/$',views.register),
-    url(r'^showregister/$',views.showregister),
-    url(r'^cookietest/$',views.cookietest),
-    url(r'^main/$',views.main),
-    url(r'^login/$',views.login),
-    url(r'^showmain/$',views.showmain),
-    url(r'^quit/$',views.quit),
-    url(r'^good/(\d+)$',views.good,name="good"),
-    url(r'^main2/$',views.main2),
-    url(r'^postfile/$',views.postfile),
-    url(r'^showpost/$',views.showpost),
-    url(r'^verifycode/$',views.verifycode),
-    url(r'^verifycodepost/$',views.verifycodepost),
-    url(r'^verifycodecheck/$',views.verifycodecheck),
-    url(r'^upfile/$',views.upfile),
-    url(r'^savefile/$',views.savefile),
-    url(r'^ajastu/$',views.ajastu),
-    url(r'^studentinfo/$',views.studentinfo),
-    url(r'^edit/$',views.edit),
-    url(r'^celery/$',views.celery),
+    re_path(r'^$',views.index,name="index"),
+    re_path(r'^(\d+)/$',views.detail),
+    re_path(r'^grade/$',views.grade),
+    re_path(r'^grades/$',views.grades),
+    re_path(r'^student/(\d+)$',views.student),
+    re_path(r'^grade/(\d+)$',views.gradeStudents),
+    re_path(r'^addstu/$',views.addstu),
+    re_path(r'^addstu2/$',views.addstu2),
+    re_path(r'^stu/(\d+)$',views.stupage),
+    re_path(r'^stusearch/$',views.stusearch),
+    re_path(r'^attrib/$',views.attrib),
+    re_path(r'^get1/$',views.get1),
+    re_path(r'^register/$',views.register),
+    re_path(r'^showregister/$',views.showregister),
+    re_path(r'^cookietest/$',views.cookietest),
+    re_path(r'^main/$',views.main),
+    re_path(r'^login/$',views.login),
+    re_path(r'^showmain/$',views.showmain),
+    re_path(r'^quit/$',views.quit),
+    re_path(r'^good/(\d+)$',views.good,name="good"),
+    re_path(r'^main2/$',views.main2),
+    re_path(r'^postfile/$',views.postfile),
+    re_path(r'^showpost/$',views.showpost),
+    re_path(r'^verifycode/$',views.verifycode),
+    re_path(r'^verifycodepost/$',views.verifycodepost),
+    re_path(r'^verifycodecheck/$',views.verifycodecheck),
+    re_path(r'^upfile/$',views.upfile),
+    re_path(r'^savefile/$',views.savefile),
+    re_path(r'^ajastu/$',views.ajastu),
+    re_path(r'^studentinfo/$',views.studentinfo),
+    re_path(r'^edit/$',views.edit),
+    re_path(r'^celery/$',views.celery),
 ]
 
 # urlpatterns+=staticfiles_urlpatterns()

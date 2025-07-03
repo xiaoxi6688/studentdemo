@@ -1,8 +1,6 @@
 from django.db import models
 
 # Create your models here.
-from tinymce.models import HTMLField
-
 
 class Grade(models.Model):
     #gid=models.AutoField(primary_key=True)
@@ -51,4 +49,4 @@ class Student(models.Model):
                     sgrade=grade)
         return stu
 class Text(models.Model):
-    str=HTMLField()
+    str=models.TextField()
